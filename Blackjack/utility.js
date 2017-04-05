@@ -19,6 +19,7 @@ function fillCardsVector(){
 	function hideCards(){
 		let images = document.getElementsByTagName("img");
 		for(let index = 0; index < images.length; index++){
+			images[index].src = "#";
 			images[index].style.visibility = "hidden";
 		}
 	}
@@ -32,7 +33,7 @@ function fillCardsVector(){
 //this function create a log about the last game
 	function createNewLog(winner){
 		let p = document.createElement("p");
-		let text = document.createTextNode(winner + " won! You won "+wins+ " time(s) in "+ games + " games");
+		let text = document.createTextNode(winner + " won! You won "+wins+ " time(s) in "+ games + " game(s)");
 		p.appendChild(text);
 		document.getElementById("logs").appendChild(p);
 		document.getElementById("reset").style.visibility = "visible";
